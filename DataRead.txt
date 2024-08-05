@@ -1,0 +1,17 @@
+import pandas as pd
+
+# Specify the path to your Excel file
+excel_file_path = "C:\Users\PMLS\Documents\PCA\Gold_Price.xlsx"
+
+# Use try-except block to catch and handle potential file not found errors
+try:
+    # Read the Excel file into a pandas DataFrame
+    df = pd.read_excel(excel_file_path)
+
+    # Display the DataFrame (optional)
+    print(df)
+
+except FileNotFoundError:
+    print(f"Error: File not found at {excel_file_path}")
+except Exception as e:
+    print(f"An error occurred: {e}")
